@@ -1,74 +1,33 @@
-// Oppgave 1:
+// Working with strings
 
-const story = `
-In a land far, far away, a dancing banana twirled under the moonlight, while 
-a robot vacuum chased after a confused squirrel. The banana laughed, "I wish 
-I were an octopus, then I could juggle stars." Just then, a turtle wearing 
-sunglasses zoomed by on a skateboard, leaving behind a trail of sparkles. An owl 
-hooted loudly, "Pineapples are overrated!" but nobody was listening, because 
-a giraffe in a party hat was singing 'Happy Birthday' to a watermelon. Meanwhile, 
-a rainbow-colored whale swam through the sky, pondering the mysteries of pizza 
-and socks. "One day, I'll find the ultimate pizza," whispered the whale. A dragonfly 
-with a monocle hovered nearby, discussing philosophy with a very serious-looking toaster.
-`;
+// let phrase = "Strings are fun!";
 
-const array = story.split(" ");
+// console.log(phrase.length);
 
-const new_story =
-  array[61].charAt(0).toUpperCase() +
-  array[61].slice(1) +
-  " " +
-  array[17] +
-  " " +
-  array[18] +
-  " " +
-  array[11] +
-  " " +
-  array[54] +
-  "." +
-  " " +
-  array[60].charAt(0).toUpperCase() +
-  array[60].slice(1) +
-  " " +
-  array[11] +
-  " " +
-  array[66] +
-  " " +
-  array[71] +
-  " " +
-  array[114] +
-  " " +
-  array[115].slice(0, 7) +
-  " " +
-  array[64] +
-  " " +
-  array[1] +
-  " " +
-  array[104] +
-  " " +
-  array[17] +
-  " " +
-  array[18] +
-  " " +
-  array[11] +
-  " " +
-  array[8] +
-  ".";
-console.log(new_story);
+// console.log(phrase.toUpperCase());
 
-// "Nobody chased after the owl. But the giraffe was very
-//  serious because a dragonfly chased after the banana."
+// console.log(phrase.toLowerCase());
 
-// Oppgave 2:
+// console.log(phrase.charAt(5));
+// "ABCDEFG"
+//  0123456
 
-let num = Math.round(Math.random() * 100);
+// console.log(phrase.indexOf("e"));
+// console.log(phrase.lastIndexOf("s"));
 
-console.log(num);
+// console.log(phrase.substring(0, 7));
+// console.log(phrase.substring(phrase.indexOf("f"), phrase.length));
 
-if (num > 69) {
-  console.log("Number is bigger than 69!");
-} else if (num === 69) {
-  console.log("nice");
-} else {
-  console.log("Number is smaller than 69!");
-}
+// console.log(phrase.endsWith("fun!"));
+// console.log(phrase.endsWith("funny!"));
+
+// let text = "are fun!";
+// console.log(phrase.includes("Strings"));
+// console.log(phrase.includes(text));
+
+// Working with math and numbers
+
+// Math.abs(num), Math.max(num1, num2), Math.min(num1, num2), Math.round(number)
+// Math.pow(num, power), Math.sqrt(num), Math.random(), Math.floor()
+
+// Se an om vi får tid til å prate om user input og kalkulator
