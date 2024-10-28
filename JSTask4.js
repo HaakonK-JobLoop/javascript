@@ -79,8 +79,7 @@ console.log("\nOppgave", 2);
 // Om tallet er over 50 skal du console.log("Tallet er større enn 50!").
 // Du kan også legge til spesielle conditions for spesifike tall, om du ønsker å leke deg litt med denne.
 
-let Num = 50;
-Num = Math.round(Math.random() * 100);
+let Num = Math.round(Math.random() * 100);
 
 if (Num === 100) {
   console.log(Num, "We're so back");

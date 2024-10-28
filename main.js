@@ -298,68 +298,42 @@ because Math.max expects individual arguments, not an array.
 // console.log("The result is: " + result + "!");
 
 // document.write("The result is: " + result + "!");
-let randomNumber = Math.round(Math.random() * 100);
 
-if (randomNumber === 100) {
-  console.log("Congratz Winner!");
-} else if (randomNumber === 0) {
-  console.log("Lmao Loser!");
-} else if (randomNumber === 69) {
-  console.log("Nice!");
-} else if (randomNumber === 42) {
-  console.log("Lit!");
-} else if (randomNumber === 18) {
-  console.log("Finally Legal!");
-} else if (randomNumber === 13) {
-  console.log("Unlucky!");
-} else if (randomNumber < 50) {
-  console.log("Tallet er mindre enn 50!");
-} else {
-  console.log("Tallet er større enn 50!");
-}
+//Oppgave 1
 
-console.log("Generated number: " + randomNumber);
+const nonsenseStory = `In a land far, far away, a dancing banana twirled under the moonlight, while a
+robot vacuum chased after a confused squirrel. The banana laughed, "I wish I were
+an octopus, then I could juggle stars." Just then, a turtle wearing sunglasses
+zoomed by on a skateboard, leaving behind a trail of sparkles. An owl hooted
+loudly, "Pineapples are overrated!" but nobody was listening, because a giraffe in
+a party hat was singing 'Happy Birthday' to a watermelon. Meanwhile, a rainbow-
+colored whale swam through the sky, pondering the mysteries of pizza and socks.
+"One day, I'll find the ultimate pizza," whispered the whale. A dragonfly with a
+monocle hovered nearby, discussing philosophy with a very serious-looking toaster.`;
 
-const gibberish_ala_håkon = `
-In a land far, far away, a dancing banana twirled under the moonlight, while a robot vacuum chased after a confused squirrel. The banana laughed, "I wish I were an octopus, then I could juggle stars." Just then, a turtle wearing sunglasses zoomed by on a skateboard, leaving behind a trail of sparkles. An owl hooted loudly, "Pineapples are overrated!" but nobody was listening, because a giraffe in a party hat was singing 'Happy Birthday' to a watermelon. Meanwhile, a rainbow-colored whale swam through the sky, pondering the mysteries of pizza and socks. "One day, I'll find the ultimate pizza," whispered the whale. A dragonfly with a monocle hovered nearby, discussing philosophy with a very serious-looking toaster.
-`;
+let storyArray = nonsenseStory.split(" ");
 
-const phrase = `${gibberish_ala_håkon.substring(
-  3,
-  10
-)} ${gibberish_ala_håkon.substring(45, 50)} ${gibberish_ala_håkon.substring(
-  59,
-  68
-)} ${gibberish_ala_håkon.substring(157, 164)}. ${gibberish_ala_håkon.substring(
-  12,
-  16
-)} ${gibberish_ala_håkon.substring(204, 205)} ${gibberish_ala_håkon.substring(
-  321,
-  329
-)} ${gibberish_ala_håkon.substring(173, 177)} ${gibberish_ala_håkon.substring(
-  331,
-  338
-)} ${gibberish_ala_håkon.substring(68, 73)} ${gibberish_ala_håkon.substring(
-  59,
-  68
-)} ${gibberish_ala_håkon.substring(204, 205)} ${gibberish_ala_håkon.substring(
-  193,
-  200
-)} ${gibberish_ala_håkon.substring(192, 193)} ${gibberish_ala_håkon.substring(
-  265,
-  270
-)} ${gibberish_ala_håkon.substring(285, 292)}.`;
+let newArray = [];
 
-console.log(phrase);
+newArray.push(storyArray[storyArray.indexOf("nobody")]);
+newArray.push(storyArray[storyArray.indexOf("chased")]);
+newArray.push(storyArray[storyArray.indexOf("after")]);
+newArray.push(storyArray[storyArray.indexOf("the")]);
+newArray.push(storyArray[storyArray.indexOf("owl")]);
+newArray.push(storyArray[storyArray.indexOf("but")]);
+newArray.push(storyArray[storyArray.indexOf("the")]);
+newArray.push(storyArray[storyArray.indexOf("giraffe")]);
+newArray.push(storyArray[storyArray.indexOf("was")]);
+newArray.push(storyArray[storyArray.indexOf("very")]);
+newArray.push(storyArray[storyArray.indexOf("serious")]);
+newArray.push(storyArray[storyArray.indexOf("because")]);
+newArray.push(storyArray[storyArray.indexOf("a")]);
+newArray.push(storyArray[storyArray.indexOf("dragonfly")]);
+newArray.push(storyArray[storyArray.indexOf("chased")]);
+newArray.push(storyArray[storyArray.indexOf("after")]);
+newArray.push(storyArray[storyArray.indexOf("the")]);
+newArray.push(storyArray[storyArray.indexOf("banana")]);
 
-const praisecthulu1 = gibberish_ala_håkon.substring(3, 10);
-const praisecthulu2 = gibberish_ala_håkon.substring(45, 50);
-const praisecthulu3 = gibberish_ala_håkon.substring(59, 68);
-const praisecthulu4 = gibberish_ala_håkon.substring(157, 164);
-const praisecthulu5 = gibberish_ala_håkon.substring(12, 16);
-const praisecthulu6 = gibberish_ala_håkon.substring(321, 329);
-const praisecthulu7 = gibberish_ala_håkon.substring(344, 350);
+let newStory = newArray.toString;
 
-const newPhrase = `${praisecthulu1} ${praisecthulu2} ${praisecthulu3} ${praisecthulu4} ${praisecthulu5} ${praisecthulu6} ${praisecthulu7}`;
-
-console.log(newPhrase);
+console.log(newStory);
