@@ -299,41 +299,68 @@ because Math.max expects individual arguments, not an array.
 
 // document.write("The result is: " + result + "!");
 
-//Oppgave 1
+// function helloWorld() {
+//   console.log("Hello World");
+// }
 
-const nonsenseStory = `In a land far, far away, a dancing banana twirled under the moonlight, while a
-robot vacuum chased after a confused squirrel. The banana laughed, "I wish I were
-an octopus, then I could juggle stars." Just then, a turtle wearing sunglasses
-zoomed by on a skateboard, leaving behind a trail of sparkles. An owl hooted
-loudly, "Pineapples are overrated!" but nobody was listening, because a giraffe in
-a party hat was singing 'Happy Birthday' to a watermelon. Meanwhile, a rainbow-
-colored whale swam through the sky, pondering the mysteries of pizza and socks.
-"One day, I'll find the ultimate pizza," whispered the whale. A dragonfly with a
-monocle hovered nearby, discussing philosophy with a very serious-looking toaster.`;
+// helloWorld();
 
-let storyArray = nonsenseStory.split(" ");
+// function helloWorld(phrase) {
+//   console.log(phrase);
+// }
 
-let newArray = [];
+// let text = "Hello World";
 
-newArray.push(storyArray[storyArray.indexOf("nobody")]);
-newArray.push(storyArray[storyArray.indexOf("chased")]);
-newArray.push(storyArray[storyArray.indexOf("after")]);
-newArray.push(storyArray[storyArray.indexOf("the")]);
-newArray.push(storyArray[storyArray.indexOf("owl")]);
-newArray.push(storyArray[storyArray.indexOf("but")]);
-newArray.push(storyArray[storyArray.indexOf("the")]);
-newArray.push(storyArray[storyArray.indexOf("giraffe")]);
-newArray.push(storyArray[storyArray.indexOf("was")]);
-newArray.push(storyArray[storyArray.indexOf("very")]);
-newArray.push(storyArray[storyArray.indexOf("serious")]);
-newArray.push(storyArray[storyArray.indexOf("because")]);
-newArray.push(storyArray[storyArray.indexOf("a")]);
-newArray.push(storyArray[storyArray.indexOf("dragonfly")]);
-newArray.push(storyArray[storyArray.indexOf("chased")]);
-newArray.push(storyArray[storyArray.indexOf("after")]);
-newArray.push(storyArray[storyArray.indexOf("the")]);
-newArray.push(storyArray[storyArray.indexOf("banana")]);
+// helloWorld(text);
 
-let newStory = newArray.toString;
+// function sum(x, y) {
+//   console.log(x + y);
+// }
 
-console.log(newStory);
+// sum(6, 4);
+
+// let arrow = () => {
+//   return "Hello world from an arrow function!";
+// };
+
+// console.log(arrow());
+
+// let x = 5;
+
+// function iAmHungry(x) {
+//   let daysSinceIveEaten = x;
+//   console.log(x);
+// }
+
+// iAmHungry();
+
+// function multiplicator(x, y) {
+//   let result = x * y;
+//   console.log(`Your first number is ${x}`);
+//   console.log(`Your first number is ${y}`);
+//   console.log(`Your result is ${result}`);
+// }
+
+// multiplicator(10, 5);
+
+// const calculator = (num1, num2, operator) => {
+//   if (operator === "+") {
+//     return num1 + num2;
+//   } else if (operator === "-") {
+//     return num1 - num2;
+//   } else if (operator === "*") {
+//     return num1 * num2;
+//   } else {
+//     return "Invalid operator";
+//   }
+// };
+
+// console.log(calculator(10, "Heisann", "*"));
+
+let list = ["Apple", "Banana", "Orange"];
+let listTwo = ["A monkey", "Being NOT funky"];
+let result = list.concat(listTwo);
+
+console.log(list);
+console.log(listTwo);
+console.log(result);
