@@ -698,54 +698,54 @@ because Math.max expects individual arguments, not an array.
 // }
 // console.log(people);
 
-const character = {
-  name: "Johnny Bravo",
-  health: 50,
-  strength: 15,
-  intelligence: 1,
-  charisma: 8,
-};
+// const character = {
+//   name: "Johnny Bravo",
+//   health: 50,
+//   strength: 15,
+//   intelligence: 1,
+//   charisma: 8,
+// };
 
-const enemy = {
-  name: "James Bond",
-  health: 25,
-  strength: 15,
-};
+// const enemy = {
+//   name: "James Bond",
+//   health: 25,
+//   strength: 15,
+// };
 
-function attack(aggressor, victim) {
-  let damage = aggressor.strength * Math.floor(Math.random() + 0.5);
-  victim.health -= damage;
-  if (damage === 0) {
-    console.log(`${aggressor.name} attacks ${victim.name}, and misses!`);
-  } else {
-    console.log(
-      `${aggressor.name} attacks ${victim.name}, and deals ${damage} damage!`
-    );
-  }
-}
+// function attack(aggressor, victim) {
+//   let damage = aggressor.strength * Math.floor(Math.random() + 0.5);
+//   victim.health -= damage;
+//   if (damage === 0) {
+//     console.log(`${aggressor.name} attacks ${victim.name}, and misses!`);
+//   } else {
+//     console.log(
+//       `${aggressor.name} attacks ${victim.name}, and deals ${damage} damage!`
+//     );
+//   }
+// }
 
-function encounter() {
-  let chance = Math.random();
-  if (chance < 0.3) {
-    console.log("Johnny found a health potion, HOO-HAH!");
-    character.health += 10;
-  } else if (chance < 0.6) {
-    console.log("James Bond appears with a cocktail in his hand!");
-    attack(character, enemy);
-    attack(enemy, character);
-  } else {
-    console.log("It's quiet... Too quiet.");
-    console.log("Johnny starts doing the monkey.");
-  }
-}
+// function encounter() {
+//   let chance = Math.random();
+//   if (chance < 0.3) {
+//     console.log("Johnny found a health potion, HOO-HAH!");
+//     character.health += 10;
+//   } else if (chance < 0.6) {
+//     console.log("James Bond appears with a cocktail in his hand!");
+//     attack(character, enemy);
+//     attack(enemy, character);
+//   } else {
+//     console.log("It's quiet... Too quiet.");
+//     console.log("Johnny starts doing the monkey.");
+//   }
+// }
 
-for (let i = 0; i < 10; i++) {
-  console.log(`Turn ${i + 1}`);
-  encounter();
-  console.log(`Johnny has ${character.health} health left.`);
-  console.log(`James has ${enemy.health} health left.`);
-  if (character.health <= 0 || enemy.health <= 0 || i === 9) {
-    console.log("Game over!");
-    break;
-  }
-}
+// for (let i = 0; i < 10; i++) {
+//   console.log(`Turn ${i + 1}`);
+//   encounter();
+//   console.log(`Johnny has ${character.health} health left.`);
+//   console.log(`James has ${enemy.health} health left.`);
+//   if (character.health <= 0 || enemy.health <= 0 || i === 9) {
+//     console.log("Game over!");
+//     break;
+//   }
+// }
