@@ -357,10 +357,395 @@ because Math.max expects individual arguments, not an array.
 
 // console.log(calculator(10, "Heisann", "*"));
 
-let list = ["Apple", "Banana", "Orange"];
-let listTwo = ["A monkey", "Being NOT funky"];
-let result = list.concat(listTwo);
+// let list = ["Karen", "Stacy", "Jeremy", "Clarkson", "Funny", "Lovecraft"];
+// let phrase = "Lovecraft";
 
-console.log(list);
-console.log(listTwo);
-console.log(result);
+// console.log(list.includes("Jeremy"));
+// console.log(phrase.includes(""));
+
+// const checker = (name) =>
+//   `The array ${list.includes(name) ? "does" : "doesn't"} contain ${name}`;
+
+// function checkerTwo(array, name) {
+//   if (array.includes(name)) {
+//     return `The array does contain ${name}`;
+//   } else {
+//     return `The array doesn't contain ${name}`;
+//   }
+// }
+
+// console.log(checker("Jeremy"));
+// console.log(checkerTwo(list, "Jeremy"));
+
+// const fruitsObject = {
+//   apples: 500,
+//   bananas: 300,
+//   oranges: 200,
+// };
+
+// console.log(fruitsObject.size);
+
+// Create a map
+
+// const fruitsMap = new Map([
+//   ["apples", 500],
+//   ["bananas", 300],
+//   ["oranges", 200],
+// ]);
+
+// fruitsMap.forEach(function (value, key) {
+//   console.log(key + ": " + value);
+// });
+
+// const letters = new Set(["a", "b", "c"]);
+
+// letters.add("A");
+// letters.add(1);
+// letters.add([1, 2, 3, 4, 5]);
+// letters.add(true);
+// letters.add({ name: "Jeremy", lastName: "Clarkson" });
+
+// console.log(letters);
+// console.log(typeof letters);
+
+// While loop
+
+// for (initialization; testing condition; increment/decrement) {
+//     statement(s)
+// }
+
+// for (let i = 0; i < 50; i++) {
+//   console.log("Hello World!");
+// }
+
+// let i = 0;
+
+// while (i < 10) {
+//   console.log("Hello World!");
+//   i++;
+// }
+
+// let names = [
+//   "Tom",
+//   "Eric",
+//   "Jessica",
+//   "Scott",
+//   "Anna",
+//   "Carl",
+//   "Elisabeth",
+//   "Benny",
+//   "Oliver",
+//   "Andy",
+//   "Jenny",
+//   "Ashley",
+//   "Erin",
+//   "Patrick",
+// ];
+
+// for (let i = 0; i < names.length; i++) {
+//   console.log(`Hello ${names[i]}, have a good day!`);
+// }
+
+// let randomNum = Math.round(Math.random() * 10);
+
+// console.log("The number we want to reach is: " + randomNum);
+
+// let i = 0;
+
+// while (i != randomNum) {
+//   i++;
+//   if (i === 11) break;
+//   console.log("Trying.. " + i);
+// }
+
+// let dirtyArray = [
+//   "    thIs     ",
+//   "arrAY",
+//   "     lOOks     ",
+//   "TERRiblE",
+//   "     PLEAsE",
+//   "fIx     ",
+//   "it",
+// ];
+
+// function wordCleaner(arr) {
+//   let cleanedArray = [];
+//   for (word of arr) {
+//     cleanedArray.push(word.trim().toUpperCase());
+//   }
+//   return cleanedArray;
+// }
+
+// console.log(wordCleaner(dirtyArray));
+// let j = 0;
+
+// do {
+//   console.log("Hello World!");
+//   j++;
+// } while (j < 1);
+
+// while (j < 2) {
+//   console.log("J is less than two!");
+//   j++;
+// }
+
+// console.log(j);
+
+// let arr = [1, 2, 3, 4, 5];
+// for (item of arr) {
+//   console.log(item);
+// }
+
+// let myObject = {
+//   x: 1,
+//   y: 2,
+//   z: 3,
+// };
+// for (key in myObject) {
+//   console.log(key, myObject[key]);
+// }
+
+// function printOddNumbers(arr) {
+//   for (num of arr) {
+//     if (num === 7) {
+//       console.log("I HATE THE NUMBER 7");
+//       continue;
+//     }
+//     if (num % 2 !== 0) console.log(num);
+//   }
+// }
+
+// printOddNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
+
+// let stringArrayReverser = (arr) => {
+//   if (arr.length === 0) return "Array too short!";
+//   let reversedArray = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     reversedArray.push(arr[i].split("").reverse().join(""));
+//   }
+//   return reversedArray;
+// };
+
+// let lemon = ["L", "e", "m", "o", "n"];
+// let lemonReverse = ["n", "o", "m", "e", "L"];
+// let lemonJoined = "nomeL";
+
+// console.log(
+//   stringArrayReverser([
+//     "Lemon",
+//     "Mangos",
+//     "Apple",
+//     "Pear",
+//     "Grapes",
+//     "Kiwi",
+//     "Fig",
+//     "Peach",
+//     "Grapefruit",
+//     "Watermelon",
+//     "Orange",
+//     "Banana",
+//   ])
+// );
+
+// const makeNumberArray = (size, maxNum) => {
+//   let numArray = [];
+//   for (let i = 0; i < size; i++) {
+//     numArray.push(Math.round(Math.random() * maxNum));
+//   }
+//   return numArray;
+// };
+
+// const numFinder = (arr) => {
+//   let biggest = 0;
+//   for (val of arr) {
+//     if (val > biggest) biggest = val;
+//   }
+//   console.log(arr);
+//   return `The biggest number is ${biggest}`;
+// };
+
+// const NumFinder = (arr) => {
+//   let Biggest = 0;
+//   let Smallest = Infinity;
+//   for (val of arr) {
+//     if (val > Biggest) Biggest = val;
+//     if (val < Smallest) Smallest = val;
+//   }
+//   console.log(arr);
+//   return `The biggest number is ${Biggest} and smallest number is ${Smallest}`;
+// };
+
+// console.log(NumFinder(makeNumberArray(25, 100000)));
+
+// function generatePassword(len) {
+//   let password = "";
+//   while (password.length < len) {
+//     password += String.fromCharCode(Math.round(Math.random() * 87) + 35);
+//   }
+//   return password;
+// }
+
+// console.log(generatePassword(150));
+
+// let obj = {
+//   firstName: "Yngve",
+//   lastName: "Olsen",
+//   fullName: function () {
+//     return this.firstName + " " + this.lastName;
+//   },
+//   addMiddleName: function (middleName) {
+//     this.mName = middleName;
+//   },
+// };
+
+// console.log(obj.fullName());
+// obj.addMiddleName("Geir");
+// console.log(obj);
+
+// const personOne = {
+//   firstName: "Spongebob",
+//   lastName: "Squarepants",
+//   age: 26,
+//   isEmployed: true,
+//   sayHello: function () {
+//     console.log("I have an irritating laughter");
+//   },
+//   sayBye: function () {
+//     console.log("See ya later");
+//   },
+// };
+
+// personOne.sayHello();
+// personOne.sayBye();
+
+// const people = [
+//   {
+//     name: "Thomas",
+//     male: true,
+//     age: 23,
+//     hobbies: ["cycling", "football", "pool"],
+//   },
+//   {
+//     name: "Susan",
+//     male: false,
+//     age: 26,
+//     hobbies: ["jogging", "travelling", "dancing"],
+//   },
+//   {
+//     name: "Monica",
+//     male: false,
+//     age: 21,
+//     hobbies: ["skateboarding", "guitar", "concerts"],
+//   },
+//   {
+//     name: "Avery",
+//     male: true,
+//     age: 28,
+//     hobbies: ["coding", "games", "memes"],
+//   },
+//   {
+//     name: "Phillip",
+//     male: true,
+//     age: 24,
+//     hobbies: ["boxing", "wrestling", "mma"],
+//   },
+//   {
+//     name: "Otto",
+//     male: true,
+//     age: 36,
+//     hobbies: ["movies", "cinema", "music"],
+//   },
+//   {
+//     name: "Annabelle",
+//     male: false,
+//     age: 30,
+//     hobbies: ["makeup", "fashion", "shopping"],
+//   },
+//   {
+//     name: "Cathy",
+//     male: false,
+//     age: 18,
+//     hobbies: ["design", "drawing", "css"],
+//   },
+// ];
+
+// for (let i = 0; i < people.length; i++) {
+//   console.log(
+//     `${people[i].name} is a ${people[i].male ? "man" : "woman"}, who is ${
+//       people[i].age
+//     } years old.`
+//   );
+// }
+
+// const hobbyList = [];
+
+// for (let i = 0; i < people.length; i++) {
+//   hobbyList.push(...people[i].hobbies);
+// }
+
+// console.log(hobbyList);
+
+// let combinedAge = 0;
+
+// for (let i = 0; i < people.length; i++) {
+//   combinedAge += people[i].age;
+// }
+
+// console.log(`The combined age of all these people is ${combinedAge}`);
+
+// for (let i = 0; i < people.length; i++) {
+//   people[i].title = people[i].male ? "Mr." : "Mrs.";
+// }
+// console.log(people);
+
+const character = {
+  name: "Johnny Bravo",
+  health: 50,
+  strength: 15,
+  intelligence: 1,
+  charisma: 8,
+};
+
+const enemy = {
+  name: "James Bond",
+  health: 25,
+  strength: 15,
+};
+
+function attack(aggressor, victim) {
+  let damage = aggressor.strength * Math.floor(Math.random() + 0.5);
+  victim.health -= damage;
+  if (damage === 0) {
+    console.log(`${aggressor.name} attacks ${victim.name}, and misses!`);
+  } else {
+    console.log(
+      `${aggressor.name} attacks ${victim.name}, and deals ${damage} damage!`
+    );
+  }
+}
+
+function encounter() {
+  let chance = Math.random();
+  if (chance < 0.3) {
+    console.log("Johnny found a health potion, HOO-HAH!");
+    character.health += 10;
+  } else if (chance < 0.6) {
+    console.log("James Bond appears with a cocktail in his hand!");
+    attack(character, enemy);
+    attack(enemy, character);
+  } else {
+    console.log("It's quiet... Too quiet.");
+    console.log("Johnny starts doing the monkey.");
+  }
+}
+
+for (let i = 0; i < 10; i++) {
+  console.log(`Turn ${i + 1}`);
+  encounter();
+  console.log(`Johnny has ${character.health} health left.`);
+  console.log(`James has ${enemy.health} health left.`);
+  if (character.health <= 0 || enemy.health <= 0 || i === 9) {
+    console.log("Game over!");
+    break;
+  }
+}

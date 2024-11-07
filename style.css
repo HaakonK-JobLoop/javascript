@@ -32,3 +32,11 @@ body {
     width: 100px;
   }
 }
+
+.box {
+  width: 150px;
+  height: 200px;
+  border: solid 5px #000;
+  border-color: #000;
+  border-radius: 100%/100px 100px 0 0;
+}
