@@ -749,3 +749,175 @@ because Math.max expects individual arguments, not an array.
 //     break;
 //   }
 // }
+
+// for (let i = 1; i <= 10; i++) {
+//   console.log(i);
+// }
+
+// let i = 1;
+// while (i <= 10) {
+//   console.log(i);
+//   i++;
+// }
+
+// let names = [
+//   "Tom",
+//   "Eric",
+//   "Jessica",
+//   "Scott",
+//   "Anna",
+//   "Carl",
+//   "Elisabeth",
+//   "Benny",
+//   "Oliver",
+//   "Andy",
+//   "Jenny",
+//   "Ashley",
+//   "Erin",
+//   "Patrick",
+// ];
+
+// for (let a = 0; a < names.length; a++) {
+//   console.log(names[a]);
+// }
+
+// let names = [
+//   "Tom",
+//   "Eric",
+//   "Jessica",
+//   "Scott",
+//   "Anna",
+//   "Carl",
+//   "Elisabeth",
+//   "Benny",
+//   "Oliver",
+//   "Andy",
+//   "Jenny",
+// ];
+
+// const text = document.getElementById("phrase");
+
+// function changeText() {
+//   text.innerHTML = "Hello, you stupid world!";
+//   text.style.color = "red";
+// }
+
+// const newPhrase = document.createElement("p");
+// newPhrase.innerHTML = "Nah I'm just kidding";
+
+// text.appendChild(newPhrase);
+
+// console.log(text.innerHTML);
+
+// list = document.getElementById("list");
+
+// function createItem() {
+//   let item = document.createElement("li");
+//   let itemText = document.createElement("p");
+//   let delButton = document.createElement("button");
+//   itemText.innerHTML = names[Math.round(Math.random() * 10)];
+//   delButton.innerHTML = "Delete Name";
+//   list.appendChild(item);
+//   item.appendChild(itemText);
+//   item.appendChild(delButton);
+// }
+
+// createItem();
+
+// const text = document.getElementById("text");
+
+// text.innerText = "Hello";
+
+// const newText = document.createElement("p");
+// newText.innerText = "World";
+// text.append(newText);
+// text.append("Haha");
+
+// text.removeChild(newText);
+
+// allParagraphs = document.getElementsByTagName("p");
+
+// console.log(allParagraphs);
+
+// phrase = "Otters are cool";
+
+// const element = document.getElementsByTagName("p");
+
+// const element = document.getElementsByClassName("phrase");
+
+// console.log(element);
+
+// const button = document.getElementById("btn");
+
+// function changeText(id) {
+//   id.innerText = "Ooops!";
+//   child.style.color = "red";
+// }
+
+// function displayDate() {
+//   const dateAndTime = (document.createElement("p").innerText = Date());
+//   parent.append(dateAndTime);
+// }
+
+// const parent = document.getElementById("parent");
+// const child = document.getElementById("child");
+
+// function mOver(obj) {
+//   obj.innerText = "Thank you";
+// }
+
+// function mOut(obj) {
+//   obj.innerText = "Mouse over me";
+// }
+
+// const grandparent = document.querySelector(".grandparent");
+// const parent = document.querySelector(".parent");
+// const child = document.querySelector(".child");
+
+// grandparent.addEventListener(
+//   "click",
+//   (e) => {
+//     console.log("Grandparent capture");
+//   },
+//   { capture: true }
+// );
+
+// grandparent.addEventListener("click", (e) => {
+//   console.log("Grandparent bubble");
+// });
+
+// parent.addEventListener(
+//   "click",
+//   (e) => {
+//     console.log("Parent capture");
+//   },
+//   { capture: true }
+// );
+
+// parent.addEventListener("click", (e) => {
+//   console.log("Parent bubble");
+// });
+
+// child.addEventListener(
+//   "click",
+//   (e) => {
+//     console.log("Child capture");
+//   },
+//   { capture: true }
+// );
+
+// child.addEventListener("click", (e) => {
+//   console.log("Child bubble");
+// });
+
+// document.addEventListener(
+//   "click",
+//   (e) => {
+//     console.log("Document capture");
+//   },
+//   { capture: true }
+// );
+
+// document.addEventListener("click", (e) => {
+//   console.log("Document bubble");
+// });
