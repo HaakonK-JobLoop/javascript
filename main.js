@@ -921,3 +921,229 @@ because Math.max expects individual arguments, not an array.
 // document.addEventListener("click", (e) => {
 //   console.log("Document bubble");
 // });
+
+// Some
+// Hva gjør det?
+// Sjekker om minst ett element i en liste oppfyller en gitt betingelse.
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// const hasEven = numbers.some((numbers) => numbers % 2 === 0);
+
+// console.log(hasEven);
+
+// const numbers = [4, 9, 16, 25];
+
+// const newArray = numbers.map(Math.sqrt);
+
+// console.log(numbers);
+// console.log(newArray);
+
+// const numbers = [65, 44, 12, 4];
+// const newArray = numbers.map(myFunction);
+
+// function myFunction(num) {
+//   return num * 10;
+// }
+
+// const ages = [32, 33, 16, 40];
+// const result = ages.filter(checkAdult);
+
+// function checkAdult(age) {
+//   return age >= 18;
+// }
+
+// const numbers = [175, 50, 25];
+// const numbers = [15.5, 2.3, 1.1, 4.7];
+// const result = numbers.reduce(myFunction, 0);
+
+// function myFunction(total, num) {
+//   return total + Math.round(num);
+// }
+
+// const numbers = [1, 2, 3];
+// numbers.forEach((num) => console.log(num));
+
+// const persons = [
+//   { name: "Peter", age: 40 },
+//   { name: "Louis", age: 38 },
+// ];
+
+// const grownUp = persons.every((person) => person.age > 25);
+// console.log(grownUp);
+
+// const tall = [3, 1, 250, 4, 2];
+// tall.sort((a, b) => a - b);
+
+// console.log(tall);
+
+// const grupper = [[1, 2], [3, 4], [5]];
+// const flat = grupper.flat();
+
+// console.log(flat);
+
+// setInterval(sayHello, 1000);
+
+// function sayHello() {
+//   console.log("Hei!");
+// }
+
+/*
+
+Mouse Events:
+click - Triggered when a pointing device button is clicked on an element.
+dblclick - Triggered on double-click.
+mousedown - Triggered when a button is pressed down.
+mouseup - Triggered when a button is released.
+mouseenter - Triggered when the pointer enters an element.
+mouseleave - Triggered when the pointer leaves an element.
+mousemove - Triggered when the pointer moves over an element.
+mouseover - Triggered when the pointer hovers over an element.
+mouseout - Triggered when it moves out of an element.
+
+Keyboard Events:
+keydown - Triggered when a key is pressed.
+keypress - Triggered when a key is pressed down (deprecated).
+keyup - Triggered when a key is released.
+
+Focus Events:
+blur - Triggered when an element loses focus.
+focus - Triggered when an element gains focus.
+focusin - Similar to focus, but bubbles.
+focusout - Similar to blur, but bubbles.
+
+Form Events:
+change - Triggered when the value of an input, select, or textarea changes.
+input - Triggered when the value of an input, select, or textarea is being input.
+invalid - Triggered when a form element's value is invalid.
+reset - Triggered when a form is reset.
+submit - Triggered when a form is submitted.
+search - Triggered when a user submits a search in an input element.
+
+Clipboard Events:
+copy - Triggered when the user initiates a copy action.
+cut - Triggered when the user initiates a cut action.
+paste - Triggered when the user initiates a paste action.
+
+Media Events:
+abort - Triggered when the loading of a media resource has been aborted.
+canplay - Triggered when the browser can start playing media.
+canplaythrough - Triggered when the browser estimates it can play through the media without buffering.
+durationchange - Triggered when the duration of the media changes.
+ended - Triggered when playback stops because the end of the media has been reached.
+error - Triggered when a media resource fails to load.
+loadeddata - Triggered when the first frame of the media is loaded.
+loadedmetadata - Triggered when metadata for the media is loaded.
+pause - Triggered when media playback is paused.
+play - Triggered when media playback starts.
+playing - Triggered when playback resumes after being paused.
+progress - Triggered as the browser loads a resource.
+ratechange - Triggered when the playback rate changes.
+seeked - Triggered when a seek operation completes.
+seeking - Triggered when a seek operation starts.
+stalled - Triggered when the browser tries to fetch media data, but none is arriving.
+suspend - Triggered when the browser intentionally does not fetch media data.
+timeupdate - Triggered when the playback position changes.
+volumechange - Triggered when the volume is changed.
+waiting - Triggered when playback stops due to buffering.
+
+Drag and Drop Events:
+drag - Triggered when an element is being dragged.
+dragend - Triggered when the drag operation ends.
+dragenter - Triggered when a dragged element enters a drop target.
+dragleave - Triggered when a dragged element leaves a drop target.
+dragover - Triggered when a dragged element is over a drop target.
+dragstart - Triggered when a drag operation starts.
+drop - Triggered when a dragged element is dropped on a drop target.
+
+Touch Events:
+touchcancel - Triggered when a touch point is disrupted.
+touchend - Triggered when a touch point is removed.
+touchmove - Triggered when a touch point moves.
+touchstart - Triggered when a touch point is placed on the surface.
+
+CSS Events:
+animationend - Triggered when a CSS animation finishes.
+animationiteration - Triggered when a CSS animation completes one iteration.
+animationstart - Triggered when a CSS animation starts.
+transitionend - Triggered when a CSS transition finishes.
+
+Document Events:
+DOMContentLoaded - Triggered when the HTML document is completely loaded and parsed.
+readystatechange - Triggered when the ready state of the document changes.
+
+Window Events:
+beforeunload - Triggered when the user is about to leave the page.
+hashchange - Triggered when the URL hash changes.
+load - Triggered when the page has loaded completely.
+resize - Triggered when the window is resized.
+scroll - Triggered when the window or an element is scrolled.
+unload - Triggered when the page is unloaded.
+
+*/
+
+// let redToggle = false;
+
+// container.addEventListener("click", () => {
+//   redToggle = !redToggle;
+//   if (redToggle) {
+//     container.style.backgroundColor = "red";
+//   } else {
+//     container.style.backgroundColor = "black";
+//   }
+// });
+
+// document.body.addEventListener("click", (e) => {
+//   console.log(e);
+// });
+
+let elementExists = false;
+let horizontalNum = 0;
+let verticalNum = 0;
+let incrementNum = 20;
+
+window.addEventListener("click", (e) => {
+  horizontalNum = e.x;
+  verticalNum = e.y;
+  if (!elementExists) {
+    const container = document.createElement("div");
+    container.setAttribute("id", "container");
+    document.body.append(container);
+    container.style.left = horizontalNum + "px";
+    container.style.top = verticalNum + "px";
+    container.textContent = "I've just been created!";
+    elementExists = true;
+  } else {
+    container.style.left = horizontalNum + "px";
+    container.style.top = verticalNum + "px";
+    container.textContent = "I'm being moved around!";
+  }
+});
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "a" || e.key === "ArrowLeft") {
+    horizontalNum -= incrementNum;
+    container.textContent = "Going left";
+    container.style.left = horizontalNum + "px";
+  }
+  if (e.key === "d" || e.key === "ArrowRight") {
+    horizontalNum += incrementNum;
+    container.textContent = "Going right";
+    container.style.left = horizontalNum + "px";
+  }
+  if (e.key === "w" || e.key === "ArrowUp") {
+    verticalNum -= incrementNum;
+    container.textContent = "Going up";
+    container.style.top = verticalNum + "px";
+  }
+  if (e.key === "s" || e.key === "ArrowDown") {
+    verticalNum += incrementNum;
+    container.textContent = "Going down";
+    container.style.top = verticalNum + "px";
+  }
+  console.log(e);
+});
+
+window.addEventListener("click", () => {
+  new Audio(`./sounds/clap.wav`).play();
+});
