@@ -1,0 +1,11 @@
+.description {
+  flex: 1;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.completed {
+  color: red;
+}
