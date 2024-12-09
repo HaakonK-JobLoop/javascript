@@ -18,16 +18,73 @@ if (storedTasks) {
 taskForm.addEventListener("submit", (e) => {
   e.preventDefault(); // Hindrer refresh
   const formData = new FormData(taskForm); // Lagrer form data
+  // Trigger error if task is empty
+  if (!formData.get("user-input")) {
+    showError("You can't submit an empty task");
+    return;
+  }
+  // Lager nytt task object of pusher til tasks array
   tasks.push({
     timeStamp: new Date().toLocaleString("en-UK"),
     description: formData.get("userInput"),
     completed: false,
-  }); // Lager nytt task object of pusher til tasks array
+  });
   renderList(tasks);
   saveStateToLocalStorage();
 });
 
+function showError(message) {
+  const modal = document.createElement("dialog");
+
+  const errorMsg = document.createElement("p");
+  errorMsg.textContent = message;
+  const closeModal = document.createElement("button");
+  closeModal.textContent = "Got it";
+  modal.append(errorMsg, closeModal);
+  document.body.append(modal);
+
+  modal.showModal();
+  window.addEventListener("click", () => {
+    modal.close();
+    window.removeEventListener("click", arguments.callee);
+  });
+}
+
+showCompleted.addEventListener("change", () => {
+  renderList(tasks);
+});
+
+sortBy.addEventListener("change", () => {
+  renderList(tasks);
+});
+
 function renderList(taskArr) {
+  // Clear local storage if task array is empty
+  if (taskArr.length === 0) {
+    localStorage.removeItem("tasks");
+    localStorage.removeItem("showCompleted");
+    localStorage.removeItem("sortBy");
+  }
+  buildList(filterAndSort(taskArr));
+}
+
+function filterAndSort(arr) {
+  return arr
+    .filter((e) => (!showCompleted.checked ? !e.completed : e))
+    .sort((a, b) => {
+      if (sortBy.value === "time-asc") {
+        return new Date(a.timeStamp) - new Date(b.timeStamp);
+      } else if (sortBy.value === "time-desc") {
+        return new Date(b.timeStamp) - new Date(a.timeStamp);
+      } else if (sortBy.value === "alpha-asc") {
+        return b.description.localeCompare(a.description);
+      } else if (sortBy.value === "alpha-desc") {
+        return a.description.localeCompare(b.description);
+      }
+    });
+}
+
+function buildList(taskArr) {
   // Empty list
   while (listContainer.firstChild) {
     listContainer.firstChild.remove();
