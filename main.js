@@ -1097,53 +1097,226 @@ unload - Triggered when the page is unloaded.
 //   console.log(e);
 // });
 
-let elementExists = false;
-let horizontalNum = 0;
-let verticalNum = 0;
-let incrementNum = 20;
+// let elementExists = false;
+// let horizontalNum = 0;
+// let verticalNum = 0;
+// let incrementNum = 20;
 
-window.addEventListener("click", (e) => {
-  horizontalNum = e.x;
-  verticalNum = e.y;
-  if (!elementExists) {
-    const container = document.createElement("div");
-    container.setAttribute("id", "container");
-    document.body.append(container);
-    container.style.left = horizontalNum + "px";
-    container.style.top = verticalNum + "px";
-    container.textContent = "I've just been created!";
-    elementExists = true;
-  } else {
-    container.style.left = horizontalNum + "px";
-    container.style.top = verticalNum + "px";
-    container.textContent = "I'm being moved around!";
-  }
-});
+// window.addEventListener("click", (e) => {
+//   horizontalNum = e.x;
+//   verticalNum = e.y;
+//   if (!elementExists) {
+//     const container = document.createElement("div");
+//     container.setAttribute("id", "container");
+//     document.body.append(container);
+//     container.style.left = horizontalNum + "px";
+//     container.style.top = verticalNum + "px";
+//     container.textContent = "I've just been created!";
+//     elementExists = true;
+//   } else {
+//     container.style.left = horizontalNum + "px";
+//     container.style.top = verticalNum + "px";
+//     container.textContent = "I'm being moved around!";
+//   }
+// });
 
-window.addEventListener("keydown", (e) => {
-  if (e.key === "a" || e.key === "ArrowLeft") {
-    horizontalNum -= incrementNum;
-    container.textContent = "Going left";
-    container.style.left = horizontalNum + "px";
-  }
-  if (e.key === "d" || e.key === "ArrowRight") {
-    horizontalNum += incrementNum;
-    container.textContent = "Going right";
-    container.style.left = horizontalNum + "px";
-  }
-  if (e.key === "w" || e.key === "ArrowUp") {
-    verticalNum -= incrementNum;
-    container.textContent = "Going up";
-    container.style.top = verticalNum + "px";
-  }
-  if (e.key === "s" || e.key === "ArrowDown") {
-    verticalNum += incrementNum;
-    container.textContent = "Going down";
-    container.style.top = verticalNum + "px";
-  }
-  console.log(e);
-});
+// window.addEventListener("keydown", (e) => {
+//   if (e.key === "a" || e.key === "ArrowLeft") {
+//     horizontalNum -= incrementNum;
+//     container.textContent = "Going left";
+//     container.style.left = horizontalNum + "px";
+//   }
+//   if (e.key === "d" || e.key === "ArrowRight") {
+//     horizontalNum += incrementNum;
+//     container.textContent = "Going right";
+//     container.style.left = horizontalNum + "px";
+//   }
+//   if (e.key === "w" || e.key === "ArrowUp") {
+//     verticalNum -= incrementNum;
+//     container.textContent = "Going up";
+//     container.style.top = verticalNum + "px";
+//   }
+//   if (e.key === "s" || e.key === "ArrowDown") {
+//     verticalNum += incrementNum;
+//     container.textContent = "Going down";
+//     container.style.top = verticalNum + "px";
+//   }
+//   console.log(e);
+// });
 
-window.addEventListener("click", () => {
-  new Audio(`./sounds/clap.wav`).play();
-});
+// window.addEventListener("click", () => {
+//   new Audio(`./sounds/clap.wav`).play();
+// });
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// const [firstNumber, secondNumber, ...theOtherNumbers] = numbers;
+
+// console.log(firstNumber);
+// console.log(secondNumber);
+// console.log(theOtherNumbers);
+
+// function colors() {
+//   return ["blue", "red"];
+// }
+
+// const [firstColor, secondColor] = colors();
+
+// console.log(firstColor);
+// console.log(secondColor);
+
+// const position = [
+//   ["x", 89],
+//   ["y", 14],
+//   ["z", 154],
+// ];
+
+// position.forEach((element) => {
+//   console.log(`Axis: ${element[0]} Value ${element[1]}`);
+// });
+
+// position.forEach(([axis, value]) => {
+//   console.log(`Axis: ${axis} Value ${value}`);
+// });
+
+// const matrix = [
+//   [0, 1, 2, 3, 4],
+//   [0, 1, 2, 3, 4],
+//   [0, 1, 2, 3, 4],
+//   [0, 1, 2, 3, 4],
+//   [0, 1, 2, 3, 4],
+// ];
+
+// const user = {
+//   name: "Vikas",
+//   displayName: "Killer981",
+//   hobbies: ["Coding", "Gaming", "Cats"],
+//   address: { streetName: "Solskinnsgaten", streetNumber: 14 },
+//   id: 78345612,
+// };
+
+// const user2 = {
+//   name: "Vikas",
+//   displayName: "Killer981",
+//   hobbies: ["Coding", "Gaming", "Cats"],
+//   address: { streetName: "Solskinnsgaten", streetNumber: 14 },
+// };
+
+// const { name, displayName: gamerTag, id = "No ID!" } = user;
+
+// // console.log(name);
+// // console.log(gamerTag);
+// // console.log(id);
+
+// function processInfo({ name, displayName, hobbies }) {
+//   console.log(name);
+//   console.log(displayName);
+//   console.log(hobbies);
+// }
+
+// function processInfo2(gamerInfo) {
+//   console.log(gamerInfo.name);
+//   console.log(gamerInfo.displayName);
+//   console.log(gamerInfo.hobbies);
+// }
+
+// processInfo(user);
+// processInfo2(user);
+
+// const people = [
+//   {
+//     name: "Thomas",
+//     male: true,
+//     age: 23,
+//     hobbies: ["cycling", "football", "pool"],
+//   },
+//   {
+//     name: "Susan",
+//     male: false,
+//     age: 26,
+//     hobbies: ["jogging", "travelling", "dancing"],
+//   },
+//   {
+//     name: "Monica",
+//     male: false,
+//     age: 21,
+//     hobbies: ["skateboarding", "guitar", "concerts"],
+//   },
+//   {
+//     name: "Avery",
+//     male: true,
+//     age: 28,
+//     hobbies: ["writing", "games", "memes"],
+//   },
+//   {
+//     name: "Phillip",
+//     male: true,
+//     age: 24,
+//     hobbies: ["boxing", "wrestling", "mma"],
+//   },
+//   {
+//     name: "Otto",
+//     male: true,
+//     age: 36,
+//     hobbies: ["movies", "cinema", "music"],
+//   },
+//   {
+//     name: "Annabelle",
+//     male: false,
+//     age: 30,
+//     hobbies: ["makeup", "fashion", "shopping"],
+//   },
+//   {
+//     name: "Cathy",
+//     male: false,
+//     age: 18,
+//     hobbies: ["design", "drawing", "css"],
+//   },
+// ];
+
+// for (let { name, male, age, hobbies } of people) {
+//   console.log(name, male, age, hobbies);
+// }
+
+// people.forEach(({ name, male, age, hobbies }) => {
+//   console.log(name, male, age, hobbies);
+// });
+
+// const myPromise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     const randomNum = Math.random();
+//     if (randomNum > 0.5) {
+//       resolve(randomNum);
+//     } else {
+//       reject(new Error("Promise failed!!"));
+//     }
+//   }, 1000);
+// });
+
+// myPromise
+//   .then((result) => {
+//     console.log(result);
+//   })
+//   .catch((error) => {
+//     console.error(error);
+//   })
+//   .finally(() => {
+//     console.log("Operation complete");
+//   });
+
+// API - Application Programming Interface
+// RESTFul API
+// JSON - Javascript Object Notation
+
+// Fetch
+
+fetch("https://jsonplaceholder.typicode.com/todos")
+  .then((res) => {
+    return res.json();
+  })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
