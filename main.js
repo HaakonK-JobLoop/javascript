@@ -1310,13 +1310,79 @@ unload - Triggered when the page is unloaded.
 
 // Fetch
 
-fetch("https://jsonplaceholder.typicode.com/todos")
-  .then((res) => {
-    return res.json();
-  })
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+// fetch("https://jsonplaceholder.typicode.com/todos")
+//   .then((res) => {
+//     return res.json();
+//   })
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+// Fetch
+
+// fetch(
+//   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png"
+// )
+//   .then((res) => getData(res))
+//   .catch((err) => console.error(err));
+
+// function getData(data) {
+//   const dogImage = document.createElement("img");
+//   dogImage.src = data.url;
+//   document.body.append(dogImage);
+// }
+
+// const apiEndpoint = "http://gutendex.com/books";
+
+// async function getBook(id) {
+//   //try/catch
+//   try {
+//     const result = await fetch(`${apiEndpoint}/${id}`);
+//     const data = await result.json();
+//     renderSite(data);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+// function renderSite(data) {
+//   console.log(data);
+// }
+// getBook(1);
+
+// Export + import
+
+// // Named imports
+// import { sum, subtract } from "./calc.js";
+
+// console.log("Named imports:");
+// console.log(sum(1, 4));
+// console.log(subtract(5, 2));
+
+// // Import all
+// import * as math from "./calc.js";
+
+// console.log("Import all:");
+// console.log(math.sum(10, 5));
+// console.log(math.subtract(10, 8));
+
+// // Named imports with alias
+// import { sum as adder, subtract as minus } from "./calc.js";
+
+// console.log("Named imports with alias:");
+// console.log(adder(5, 5));
+// console.log(minus(100, 82));
+
+// // Import default
+
+// import test from "./calc.js";
+
+// console.log(test(5, 8));
+
+// // Import default with alias
+
+// import { default as addy } from "./calc.js";
+
+// console.log(addy(13, 9));
